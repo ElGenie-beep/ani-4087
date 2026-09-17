@@ -1,18 +1,13 @@
-## 90 HZ
-duree d'une image :
-1000 / 90 = *11,1 ms*
-
-Temps restant pour le code
-11,1 - 8 = * 3,1 ms *
-## 72 HZ
-duree d'une image :
-1000 / 72 = * 13.9 ms *
-
-Temps restant pour le code
-13,9 - 8 = * 5,9 ms *
-## 120 HZ
-duree d'une image :
-1000 / 120 = * 8,3 * ms
-
-Temps restant pour le code
-8,3 - 8 = * 0,3 ms*
+##  TABLEAU DE PROPORTIONNALITE 
+##  72 HZ
+- 72 images correspond 1000 ms et 1 image correspond X ms
+ - x= 1000x1/72= 13.9 ms
+ - Budget code = 13.9-8=5.9 ms
+   ##  90 HZ
+   - 90 images correspond 1000 ms et 1 image correspond X ms
+ - x= 1000x1/90= 11.1 ms
+ - Budget code = 11.1-8=3.1 ms
+   ##  120 HZ
+    - 120 images correspond 1000 ms et 1 image correspond X ms
+ - x= 1000x1/120= 8.3 ms
+ - Budget code = 8.3-8= 0.3 ms
