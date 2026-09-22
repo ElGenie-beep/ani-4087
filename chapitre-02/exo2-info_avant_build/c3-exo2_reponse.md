@@ -17,4 +17,4 @@ Daemon
 ------------------------------------------------------------
 Status: Not running
 
-## Remarque: Il y a des éléments qui étaient absents lorsque j'ai exécuté les commandes `jenga init` (création d'un workspace) et `jenga build` (construction), et ils sont bel et bien présents lorsque j'exécute la commande `jenga info`.marque: 
+## Remarque: Il y a des éléments qui étaient absents lorsque j'ai exécuté les commandes `jenga init` (création d'un workspace) et `jenga build` (construction), et ils sont bel et bien présents lorsque j'exécute la commande `jenga info`.
