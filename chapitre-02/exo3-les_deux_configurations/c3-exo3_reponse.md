@@ -1,11 +1,2 @@
 *Comparaison de la taille des exécutables et du temps de construction*
-
-- *Pour Debug*
-  Temps le plus élevé : 2,54 s
-  Temps le plus faible : 2,02 s
-  Moyenne : (2,54 + 2,02) / 2 = 2,28 s
-
-- *Pour Release*
-  Temps le plus élevé : 2,62 s
-  Temps le plus faible : 2,31 s
-  Moyenne : (2,62 + 2,31) / 2 = 2,465 s
+Que ce soit en mode Debug ou en mode Release, l'exécutable généré pèse le même poids (136 ko). La différence se situe au niveau du temps de build : il est plus élevé en Debug (0,98 s) qu'en Release (0,72 s)
