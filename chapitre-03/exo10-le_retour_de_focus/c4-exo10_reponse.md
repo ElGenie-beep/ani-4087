@@ -38,8 +38,8 @@ Images 41 et 42 : rien ne bouge non plus.
 
 ## Comparaison A contre B
 
-	Essai A (sans remise à zéro hors focus)	Essai B (avec remise à zéro)
-accum à l'image 39	30	0
+	Essai A (sans remise à zéro hors focus) ,	Essai B (avec remise à zéro)
+accum à l'image 39	,30,	0
 yaw à l'image 40	passe de 1 à 4	reste à 1
 Comportement au retour	saut de +3 alors que la main est immobile	rien, la tête reste où elle était
 
