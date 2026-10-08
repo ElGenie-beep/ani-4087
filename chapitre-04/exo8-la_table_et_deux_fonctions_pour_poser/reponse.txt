@@ -1,1 +1,5 @@
+Lignes avant les fonctions : 30 lignes (le calcul de la hauteur etait ecrit directement dans main, a 7 endroits : le plateau, les quatre pieds et les deux branches SOL et TABLE des objets).
 
+Lignes apres : 45 lignes (poser.cpp complet : deux fonctions de 3 lignes, une fonction d'affichage, et la table et les objets passent par elles). Le fichier est plus long de 15 lignes, mais le calcul de la demi-hauteur n'est plus ecrit qu'a 2 endroits au lieu de 7.
+
+L'erreur que la fonction m'evite : confondre la hauteur et la demi-hauteur. Pour la lampe de hauteur 400 posee sur un dessus a 750, un oubli du /2 donne y = 750 + 400 = 1150 au lieu de 750 + 200 = 950, et elle flotte de 200 mm. Pour le plateau, mettre son centre a H = 750 au lieu de H - ep/2 = 720 le fait depasser de 30 mm. Avec les fonctions, le calcul sy / 2 est ecrit une seule fois et corrige une seule fois.
