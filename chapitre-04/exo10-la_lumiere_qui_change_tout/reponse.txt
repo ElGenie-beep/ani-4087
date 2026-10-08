@@ -1,1 +1,7 @@
+Répertoire : C:\Users\EL GENIE\Desktop\exo10\chapitre-04\exo10-la_lumiere_qui_change_tout
 
+Mode                 LastWriteTime         Length Name                                                                                       
+----                 -------------         ------ ----                                                                                       
+-a----        08/10/2026     23:07           1115 lumiere.cpp                                                                                
+-a----        08/10/2026     23:16           1626 reponse.txt                                                                                
+-a----        08/10/2026     23:07            311 resultat.txt           
