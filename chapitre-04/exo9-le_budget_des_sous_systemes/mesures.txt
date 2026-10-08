@@ -1,1 +1,7 @@
-
+config : ALL, essai : 1, ms : 812
+config : ALL, essai : 2, ms : 640
+...
+config : ALL, essai : 10, ms : 655
+config : RENDER3D_SHADOW, essai : 1, ms : 410
+...
+config : RENDER3D_SHADOW, essai : 10, ms : 395
