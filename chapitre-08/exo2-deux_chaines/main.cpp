@@ -1,5 +1,5 @@
 // Exo 2 : deux chaînes (une par oeil)
-// acceptée ou refusée, puis  faire  le bilan à la fin.
+// acceptée ou refusée, puis on fait le bilan à la fin.
 
 #include <iostream>
 #include <string>
@@ -8,7 +8,7 @@ int main() {
     int n = 0;
     std::cin >> n;  // nombre de chaînes à examiner
 
-    // Les compteurs du bilan. ils ne bougent que pour une chaîne ACCEPTÉE.
+    // Les compteurs du bilan. Ils ne bougent que pour une chaîne ACCEPTÉE.
     long long acceptees = 0;
     long long occupes = 0;   // somme des images des chaînes acceptées
     long long gauche = 0;
@@ -64,3 +64,16 @@ int main() {
     std::cout << "SANS NOM " << sansNom << "\n";
     return 0;
 }
+
+
+// Résultat de l'exécution  
+// CHAINE oeil-gauche 1440 1584 1 GAUCHE
+// CHAINE oeil-droit 1440 1584 1 DROIT
+// REFUSEE essai TAILLE
+// REFUSEE SANS-NOM IMAGES
+// ACCEPTEES 2
+// EMPLACEMENTS 8
+// OCCUPES 2
+// GAUCHE 1
+// DROIT 1
+// SANS NOM 0
