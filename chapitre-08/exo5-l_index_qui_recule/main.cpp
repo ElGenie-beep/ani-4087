@@ -68,3 +68,15 @@ int main() {
     return 0;
 }
 
+
+// Résultat de l'exécution 
+ // | Set-Content -Path entree.txt -Encoding ASCII; Get-Content entree.txt | .\programme.exe }
+ // 3 0 0 2 -1 0
+ // 3 1 1 0 0 0
+ // 3 3 0 2 -1 0
+// 2 4 0 1 -1 1
+// 4 8 0 3 -1 3
+// 1 5 0 0 0 0
+// REFUSEES 0
+// FAUX SIGNE 4
+// FAUX NON SIGNE 2
