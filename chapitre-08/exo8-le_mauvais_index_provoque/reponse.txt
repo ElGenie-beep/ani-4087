@@ -1,1 +1,20 @@
+Images paires et impaires :
+Avec deux images et les modes DPDPDPDP, les trames impaires (mode D) lisent l'index après la libération : elles montrent l'image qu'on vient de peindre. La trame 3 montre la position 30, soit 3 x 10. Les trames paires (mode P) lisent l'index avant la libération : elles montrent l'image de la trame d'avant. La trame 4 montre encore la position 30, au lieu de 40. Les sauts alternent donc 20, 0, 20, 0 : de 10 à 30 (saut 20), de 30 à 30 (saut 0), de 30 à 50 (saut 20), et ainsi de suite. SAUT MIN vaut 0, SAUT MAX vaut 20 et TREMBLE vaut OUI.
 
+Avec une seule image :
+En relançant avec n égal à 1, j'obtiens ceci :
+1 10 -
+2 20 10
+3 30 10
+4 40 10
+5 50 10
+6 60 10
+7 70 10
+8 80 10
+SAUT MIN 10
+SAUT MAX 10
+TREMBLE NON
+Avec une seule image, il n'y a qu'un seul emplacement. Le calcul (prochaine + n - 1) % n donne toujours 0, que je le lise avant ou après la libération. Les modes P et D désignent donc la même image, celle qui vient d'être peinte, et chaque saut vaut exactement 10, le pas de la caméra.
+
+La bonne lecture :
+Il faut lire l'index de la dernière image relâchée après ReleaseImage. ReleaseImage rend l'image et avance la prochaine image d'un cran. Après cet appel, (prochaine + n - 1) % n désigne l'image qu'on vient de peindre et de rendre.
