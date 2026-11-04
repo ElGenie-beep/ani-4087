@@ -1,1 +1,18 @@
+La relation :
+Chaque emprunt réussi doit finir par une libération, donc le nombre d'emprunts réussis moins le nombre de libérations donne le nombre d'images actuellement empruntées. Comme on ne peut en emprunter qu'une à la fois, cet écart vaut 0 ou 1. Il vaut 1 quand une image est encore empruntée au moment où l'on compte, par exemple en plein milieu d'une trame. Mais à la fin de la boucle, quand toutes les trames sont terminées, l'écart doit valoir 0. Un écart de 1 qui reste à 1 est une image jamais rendue.
 
+Mes trois nombres :
+[A REMPLIR avec le résultat de ta minute : REUSSIES = ..., REFUSEES = ..., LIBERATIONS = ... et ECART = ... Remplace cette ligne après avoir lancé la boucle pendant 60 secondes.]
+
+Le chemin qui fuit :
+Une boucle qui fuit est une boucle qui a un chemin de sortie sans ReleaseImage. à la trame 500 :
+
+    if (!chaine.acquire(index)) {
+        continue;
+    }
+    if (avecFuite && numeroTrame == 500) {
+        continue;   // on quitte la trame sans rendre l'image
+    }
+    chaine.release();
+
+Le continue de la trame 500 saute chaine.release(). L'image reste empruntée pour toujours, donc à chaque trame suivante l'emprunt est refusé et la trame est sautée, sans aucun message. Sur un essai de 8 secondes avec ce chemin, sur 500 emprunts réussis, 499 libérations (écart 1) et 77 emprunts refusés : plus aucune trame ne dessine après la trame 500. Le correctif est de rendre l'image sur chaque chemin de sortie, y compris les sorties anticipées.
