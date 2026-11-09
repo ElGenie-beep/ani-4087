@@ -99,3 +99,14 @@ int main() {
 
 
  //Resultat d'execution
+//PS C:\Users\EL GENIE\Desktop\Rihen 1\chapitre-09\exo7-le_premier_objet_saisi> "2 6`n100 0 0`n400 0 1`n0 0 0 0`n0 50 0 1`n0 150 1 1`n200 150 1 1`n200 150 1 0`n380 20 2 1" | .\programme.exe
+//1 LIBRE
+//2 TIENT 1 100 0 0
+//3 TIENT 1 50 250 1
+//4 TIENT 1 250 250 1
+//5 LIBRE
+//6 TIENT 2 400 0 1
+//SAISIES 2
+//RATEES 0
+//OBJET 1 250 250 1
+//OBJET 2 400 0 1
