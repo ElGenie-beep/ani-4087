@@ -1,1 +1,5 @@
+Ce qui change : sur un vrai casque, seule la table de correspondance changerait, c'est-à-dire les lignes USAGE COMMANDE que le programme lit. Les actions déclarées et la boucle qui suit les images resteraient les mêmes.
 
+Aucun nom de bouton :  la commande n'est utilisée qu'à un seul endroit, c'est pour cela que la même fonction sert pour les deux tables.
+
+L'action inactive :  Elle rendrait « faux », exactement comme un bouton relâché, et rien ne permet de les distinguer : c'est le rôle du champ active.
