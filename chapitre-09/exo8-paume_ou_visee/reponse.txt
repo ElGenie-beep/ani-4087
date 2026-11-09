@@ -1,1 +1,5 @@
+La distance : entre la paume droite et la visée droite, il y a 50 mm en hauteur et 150 mm vers l'avant. On obtient racine de 25000, soit environ 158 mm, ce que le programme affiche (ECART 158). La visée est donc nettement plus loin devant la main que la paume.
 
+L'angle : il vaut 0 degré. Le simulateur garde la même orientation de tête pour la paume et pour la visée : les deux points sont décalés l'un de l'autre, mais aucun n'est tourné par rapport à l'autre, donc leurs directions avant sont parallèles. Sur un vrai casque, ce serait différent : le constructeur incline la visée pour que le pointage paraisse naturel avec la manette en main, donc l'angle y serait différent de 0.
+
+Pour pointer :  Notre sortie  montre : à la tête 1, la paume atteint l'objet 1 alors que la visée atteint l'objet 2, parce qu'elle est 158 mm plus loin. Si je pointais avec la paume, le rayon partirait de travers, et si je tenais un objet avec la visée, il flotterait à côté de ma main.
