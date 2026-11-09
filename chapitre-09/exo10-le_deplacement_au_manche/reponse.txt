@@ -1,1 +1,3 @@
-
+Le lacet de chaque image choisit l’avant et la droite dans la table, donc la même flèche ne pousse pas dans la même direction après un quart de tour.
+Deux flèches opposées s’annulent (x ou y vaut 0), et une seule image est diagonale dans l’exemple (l’image 2).
+Seul le décalage change : la tête n’est jamais écrite.
