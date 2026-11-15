@@ -1,5 +1,12 @@
-Le chemin fautif : c'est le continue de l'image 3 (signe C).  À l'image 4, Wait et Begin sont refusés par la session : deux refus au journal (REFUS 2), et l'image 4,  est perdue. Le return de l'image 6 laisse aussi la trame ouverte : la ligne SANS finit par OUVERTE OUI, avec 5 débuts pour 4 fins.
+Le chemin fautif : c'est le continue de l'image 3 (signe C).
+À l'image 4, Wait et Begin sont refusés par la session : deux refus au journal (REFUS 2),
+et l'image 4,  est perdue. Le return de l'image 6 laisse aussi la trame ouverte :
+la ligne SANS finit par OUVERTE OUI, avec 5 débuts pour 4 fins.
 
-un destructeur s'exécute à chaque sortie du bloc où vit l'objet, que ce soit la fin normale du corps, un continue, un return ou une exception. 
+un destructeur s'exécute à chaque sortie du bloc où vit l'objet, 
+que ce soit la fin normale du corps, un continue, un return ou une exception. 
 
-Le return : sans garde, le return de l'image 6 sort de la boucle sans End : la trame reste ouverte quand la boucle s'arrête (OUVERTE OUI), et la session n'est jamais remise d'équerre. Avec garde, le destructeur est appelé à la sortie du corps avant que le return ne se termine : FINS vaut 6 comme DEBUTS, aucun refus, OUVERTE NON. Les images après le R ne sont pas jouées dans les deux versions.
+Le return : sans garde, le return de l'image 6 sort de la boucle sans End :
+la trame reste ouverte quand la boucle s'arrête (OUVERTE OUI), et la session n'est jamais remise d'équerre.
+Avec garde, le destructeur est appelé à la sortie du corps avant que le return ne se termine :
+FINS vaut 6 comme DEBUTS, aucun refus, OUVERTE NON. Les images après le R ne sont pas jouées dans les deux versions.
