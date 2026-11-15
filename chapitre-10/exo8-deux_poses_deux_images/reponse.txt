@@ -1,5 +1,14 @@
-Négligeable : en moyenne, la position bouge de 5 mm et le lacet de 770 millièmes de degré (0,77 degré) entre le rendu et la fin de trame, ce qui donne une vitesse moyenne de 70 degrés par seconde. Quand la tête est presque immobile (images 2 et 4), l'écart est nul. Mais ce n'est pas négligeable sur les images rapides : l'image 3 atteint 13 mm et 2,2 degrés. C'est donc négligeable en moyenne, pas dans le pire cas.
+Négligeable : en moyenne, la position bouge de 5 mm et le lacet de 770 millièmes de degré (0,77 degré) entre le rendu et la fin de trame,
+ce qui donne une vitesse moyenne de 70 degrés par seconde. 
+Quand la tête est presque immobile (images 2 et 4), l'écart est nul.
+Mais ce n'est pas négligeable sur les images rapides : l'image 3 atteint 13 mm et 2,2 degrés. 
+C'est donc négligeable en moyenne, pas dans le pire cas.
 
-Seuil : l'écart de lacet vaut la vitesse multipliée par le temps d. Avec d = 11 ms, soit 0,011 s, il dépasse un degré quand v × 0,011 > 1, donc v > 1 / 0,011, soit environ 90,9 degrés par seconde. Avec nos mesures (70 degrés par seconde en moyenne), on est en dessous du seuil, mais pas loin : une tête un peu plus rapide dépasse le degré.
+Seuil : l'écart de lacet vaut la vitesse multipliée par le temps d. Avec d = 11 ms, soit 0,011 s, 
+il dépasse un degré quand v × 0,011 > 1, donc v > 1 / 0,011,
+soit environ 90,9 degrés par seconde. Avec nos mesures (70 degrés par seconde en moyenne), 
+on est en dessous du seuil, mais pas loin : une tête un peu plus rapide dépasse le degré.
 
-Ce que corrige le compositeur : il corrige l'écart entre la pose avec laquelle l'image a été rendue et la pose réelle de la tête au moment de l'affichage. Pour cela, il utilise la pose du rendu que la couche de projection lui donne, et non la pose relue à la fin de trame. C'est la reprojection : il décale l'image de cet écart.
+Ce que corrige le compositeur : il corrige l'écart entre la pose avec laquelle l'image a été rendue et la pose réelle de la tête au moment de l'affichage.
+Pour cela, il utilise la pose du rendu que la couche de projection lui donne,
+et non la pose relue à la fin de trame. C'est la reprojection : il décale l'image de cet écart.
