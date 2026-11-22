@@ -1,1 +1,8 @@
+Ce qui varie :
+Si l'instant de chaque image venait de l'horloge, il changerait à chaque exécution : deux lancements ne démarrent jamais à la même heure, et l'écart entre deux images fluctue légèrement d'une fois sur l'autre. Le fichier produit serait donc différent à chaque fois, même si la pose de la tête est la même. On ne pourrait comparer que des impressions, jamais des valeurs identiques.
 
+Le remède :
+ L'instant de l'image t vaut t multiplié par la période, avec une période calculée en nanosecondes entières à partir de la cadence : c'est une horloge scriptée. La pose est scriptée aussi : le lacet et la position de la tête se calculent par une formule à partir de t, sans entrée de l'utilisateur. Tout est entier, donc il n'y a pas d'arrondi flottant qui change d'une machine à l'autre. Les deux exécutions donnent le même fichier, identique à l'octet.
+
+La preuve :
+Pour montrer que deux backends calculent la même chose, on les fait tourner sur le même script, avec la même pose et la même horloge scriptée, puis on compare leurs sorties image par image : positions des deux yeux et instants. Si les valeurs sont égales sur chaque image, les deux backends calculent bien la même chose. Si une valeur diffère, on sait quelle image et quel œil, donc où chercher. Sans ce test, le fait que l'image apparaisse et que rien ne plante ne prouve pas que les deux backends sont équivalents.
