@@ -1,1 +1,8 @@
+Le réglage fantôme :
+depthZeroToOne est déclaré : un backend ou l'application ne s'en sert jamais. La personne qui le règle croit changer la façon dont la profondeur est calculée. En réalité rien ne se passe : la valeur est posée dans un champ que personne ne consulte, et l'image reste identique. Le réglage trompe, parce qu'il a l'air de marcher sans rien faire.
 
+La lecture cachée :
+openXrLoaderPath a un champ, que la fonction des variables d'environnement peut poser, mais un fichier lit lui-même la variable NK_XR_OPENXR_LOADER sans passer par ce champ. Si un menu pose le champ, le backend ne le regarde pas : il suit la variable, et ce que le menu a choisi est court-circuité. Le menu affiche une valeur qui n'est pas celle utilisée, et la personne n'a aucun moyen de comprendre pourquoi son choix n'a pas d'effet. C'est pour cela qu'un GETENV l'emporte sur tout.
+
+Le menu :
+Une personne casque sur la tête pourrait changer 5 réglages sur 9 : renderScale, halfRate, submitDepthLayer, listExtensions et displayHz, qui sont lus et posés par le code ou par la fonction des variables d'environnement. Pour les quatre autres, il faut corriger. openXrLoaderPath et shotFrame : faire lire le champ par le backend, et ne laisser la variable d'environnement entrer que par la fonction explicite, au lieu d'un getenv caché. depthZeroToOne : soit le brancher à un backend qui le lit, soit le supprimer. syncCopyDiagnostic : c'est une constante, donc soit on assume qu'elle ne se règle pas, soit on lui ajoute une écriture par le code pour qu'un menu puisse la poser.
