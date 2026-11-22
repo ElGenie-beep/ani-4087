@@ -1,1 +1,8 @@
+Le défaut neutre :
+Dans l'interface commune, chacune des douze méthodes SEUL_A a déjà un corps par défaut neutre : GetVulkanRequirements rend des exigences vides et true, BindVulkan accepte tout sans rien faire, et ainsi de suite.  Une application écrite pour le casque appelle ces méthodes comme d'habitude, et sur le simulateur elles répondent sans erreur et sans effet. L'application n'a besoin d'aucun if pour savoir quel backend tourne : le contrat est le même des deux côtés. Une méthode absente du simulateur ne lui manque pas, l'interface lui donne un comportement neutre.
 
+Les crochets de test :
+DebugSetHead pose la tête directement, et DebugPushSample injecte un échantillon de suivi daté, sans lire l'horloge. Ils servent à scripter la pose et le temps, pour qu'un test donne les mêmes valeurs à chaque exécution. Le vrai casque ne peut pas les offrir : sa pose vient de ses capteurs et de son runtime, et son horloge est celle du système. L'application ne peut pas les imposer, elle les reçoit.
+
+L'image :
+Les SEUL_A qui touchent la carte graphique ou les images du casque sont GetVulkanRequirements, GetVulkanPhysicalDevice et BindVulkan pour la carte, puis CreateHmdSwapchains et SubmitEyes pour les images envoyées aux yeux. S'y ajoutent GetVisibilityMask et les trois méthodes de cadence d'affichage. Le simulateur n'en a pas besoin : aucun runtime ne lui impose une carte ou des extensions, et il n'a pas de compositeur auquel remettre des images.
